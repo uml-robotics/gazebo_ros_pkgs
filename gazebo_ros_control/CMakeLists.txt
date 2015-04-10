@@ -6,7 +6,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   control_toolbox
   controller_manager
-  hardware_interface 
+  hardware_interface
   transmission_interface
   pluginlib
   joint_limits_interface
@@ -14,8 +14,10 @@ find_package(catkin REQUIRED COMPONENTS
   angles
 )
 
-# Depend on system install of Gazebo 
+# Depend on system install of Gazebo
 find_package(gazebo REQUIRED)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
 
 catkin_package(
   CATKIN_DEPENDS
