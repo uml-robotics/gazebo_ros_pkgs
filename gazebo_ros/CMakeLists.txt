@@ -33,6 +33,8 @@ catkin_python_setup()
 
 generate_dynamic_reconfigure_options(cfg/Physics.cfg)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
+
 catkin_package(
   LIBRARIES
   gazebo_ros_api_plugin
