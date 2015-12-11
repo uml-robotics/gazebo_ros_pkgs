@@ -1942,9 +1942,9 @@ void GazeboRosApiPlugin::physicsReconfigureCallback(gazebo_ros::PhysicsConfig &c
       srv.request.ode_config.erp                        = config.erp                         ;
       srv.request.ode_config.max_contacts               = config.max_contacts                ;
       physics_reconfigure_set_client_.call(srv);
-      ROS_INFO("physics dynamics reconfigure update complete");
+      //ROS_INFO("physics dynamics reconfigure update complete");
     }
-    ROS_INFO("physics dynamics reconfigure complete");
+    //ROS_INFO("physics dynamics reconfigure complete");
   }
 }
 
